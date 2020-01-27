@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+        <h1>Outside composition header TRIAL</h1>
+
+        <ui:decorate template="./template1.xhtml">
+
+            <ui:define name="top">
+                <h:inputText value="this is top"></h:inputText>
+            </ui:define>
+
+            <ui:define name="left">
+                    <h:inputText value="this is left"></h:inputText>
+                
+                <ui:include src="jsf_intro.xhtml">
+                    
+                </ui:include>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:inputText value="this is contect"></h:inputText>
+            </ui:define>
+
+        </ui:decorate>
+
+    </body>
+</html>
